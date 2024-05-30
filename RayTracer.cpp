@@ -55,9 +55,9 @@ glm::vec3 trace(Ray ray, int step)
     if (ray.index == 0) //for the icecream texture on sphere
     {
         glm::vec3 normal = obj->normal(ray.hit);
-        float textcoords = 0.5 + ((atan2(normal.z,normal.x)) / (2*M_PI));
-        float textcoordt = 0.5 + ((asin(normal.y)) / (M_PI));
-        color = texture.getColorAt(textcoords, textcoordt);
+        float u = 0.5 + ((atan2(normal.z,normal.x)) / (2*M_PI));
+        float v = 0.5 + ((asin(normal.y)) / (M_PI));
+        color = texture.getColorAt(u, v);
         obj->setColor(color);
     }
 
