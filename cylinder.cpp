@@ -1,6 +1,7 @@
 #include "cylinder.h"
 #include <math.h>
 
+//check for intersection
 float Cylinder::intersect(glm::vec3 p0, glm::vec3 dir) {
     float a = dir.x * dir.x + dir.z * dir.z;
     float b = 2 * (dir.x * (p0.x - centre.x) + dir.z * (p0.z - centre.z));
@@ -14,6 +15,7 @@ float Cylinder::intersect(glm::vec3 p0, glm::vec3 dir) {
     float cylinderUnder = centre.y;
     float cylinderCap = centre.y + height;
 
+    //checks if within the height bounds
     if (x1 > 0 && y1 >= cylinderUnder && y1 <= cylinderCap){ 
         return x1;
     }
@@ -28,6 +30,7 @@ float Cylinder::intersect(glm::vec3 p0, glm::vec3 dir) {
 }
 
 
+//normalise vector
 glm::vec3 Cylinder::normal(glm::vec3 p) {
     if (p.y == centre.y + height)
     {

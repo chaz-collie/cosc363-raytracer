@@ -1,4 +1,4 @@
-//cone class
+//cone header file
 #ifndef H_CONE
 #define H_CONE
 

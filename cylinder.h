@@ -1,4 +1,4 @@
-//capped cylinder class
+//capped cylinder headerr file
 #ifndef H_CYLINDER
 #define H_CYLINDER
 #include <glm/glm.hpp>

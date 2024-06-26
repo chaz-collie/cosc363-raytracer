@@ -1,6 +1,7 @@
 #include "cone.h"
 #include <cmath>
 
+//check for intersection
 float Cone::intersect(glm::vec3 p0, glm::vec3 dir) {
     float yy = p0.y - centre.y;
     float tan = (radius/height) * (radius/height);
@@ -22,6 +23,7 @@ float Cone::intersect(glm::vec3 p0, glm::vec3 dir) {
     return false;
 }
 
+//normalise vector
 glm::vec3 Cone::normal(glm::vec3 p) {
     glm::vec3 d = p - centre;
     float angle = radius / height;
